@@ -74,9 +74,14 @@ export default {
                     </div>
                 </div>
                 <div class="col-12 youtube-section">
-                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
-                            Abilita sia lo scrolling che lo sfondo
-                        </button>
+                        <button class="btn d-flex justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
+                            <div class="content text-center">
+                                <div class="icon-box">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                                <h2 class="text-white">NEW MUSIC VIDEO</h2>
+                            </div>
+                        </button >
 
                         <div class="offcanvas" data-bs-dismiss="offcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
                             <div class="my-offcanvas">
@@ -171,7 +176,7 @@ export default {
 .youtube-section{
     height: 700px;
     padding: 0;
-    background-color: white;
+    background-color: black;
     .offcanvas{
         width: 100%;
         height: 100%;
@@ -193,6 +198,27 @@ export default {
     button{
         width: 100%;
         height: 100%;
+        background-image: url(../../public/instrumental-rock/assets/Video-1536x541.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        .icon-box{
+            border: 5px solid white;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            font-size: 2rem;
+            position: relative;
+            margin: 10px auto;
+            .fa-play{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-40%,-50%);
+            }
+        }
     }
 }
 </style>
