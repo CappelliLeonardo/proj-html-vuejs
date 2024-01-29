@@ -15,8 +15,24 @@ export default {
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 jumbotron-1">
-                </div>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade col-12 jumbotron-1 w-100 p-0">
+                        <div class="carousel-inner w-100 h-100">
+                            <div class="carousel-item w-100 h-100 active" data-bs-interval="1000">
+                                <img src="../../public/instrumental-rock/image.png" class="d-block w-100 h-100 " alt="...">
+                            </div>
+                            <div class="carousel-item w-100 " data-bs-interval="1000" >
+                                <img src="../../public/instrumental-rock/image (1).png" class="d-block w-100 h-100 " alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev p-0" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next p-0" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        </div>
                 <div class="col-12 info-section">
                     <div class="absolute-box d-flex">
                         <div class="info-cell">
@@ -99,11 +115,14 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/main.scss" as *;
 .jumbotron-1{
-    height:900px;
-    background-image: url(../../public/instrumental-rock/image.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height:1000px;
+    .carousel{
+        img{
+            width: 100%;
+            object-fit: contain p-0;
+        }
+    }
+   
 }
 .info-section{
     height: 700px;
@@ -111,6 +130,7 @@ export default {
     background-color: black;
     .absolute-box{
         position: absolute;
+        z-index: 2;
         width: 1200px;
         left: 50%;
         transform: translate(-50%,-50%);
