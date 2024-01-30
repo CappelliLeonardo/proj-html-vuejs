@@ -149,6 +149,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/scss/partials/variables.scss";
 main > .container-fluid:nth-child(2){
     background-color: #000000;
     padding-top: 100px;
@@ -163,7 +164,7 @@ main > .container-fluid:nth-child(2){
         a{
             text-decoration: underline;
             &:hover{
-                color: #F2870C;
+                color: $orange-color;
             }
         }
     }
