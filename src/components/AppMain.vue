@@ -1,4 +1,5 @@
 <script>
+import cardSection from './cardSection.vue'
 export default {
     data() {
         return {
@@ -7,6 +8,9 @@ export default {
     },
     methods: {
 
+    },
+    components:{
+        cardSection
     }
 }
 </script>
@@ -90,23 +94,24 @@ export default {
                     </div>
                 </div>
                 <div class="col-12 youtube-section">
-                        <button class="btn d-flex justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
-                            <div class="content text-center">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-play"></i>
-                                </div>
-                                <h2 class="text-white">NEW MUSIC VIDEO</h2>
+                    <button class="btn d-flex justify-content-center align-items-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" >
+                        <div class="content text-center">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-play"></i>
                             </div>
-                        </button >
+                            <h2 class="text-white">NEW MUSIC VIDEO</h2>
+                        </div>
+                    </button >
 
-                        <div class="offcanvas" data-bs-dismiss="offcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                            <div class="my-offcanvas">
-                                <iframe src="https://www.youtube.com/embed/mPdF9WX2EUc?rel=0" frameborder="0" allowfullscreen></iframe>
-                            </div>
+                    <div class="offcanvas" data-bs-dismiss="offcanvas" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="my-offcanvas">
+                            <iframe src="https://www.youtube.com/embed/mPdF9WX2EUc?rel=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
+        <cardSection/>
     </main>
 </template>
                                
