@@ -1,6 +1,7 @@
 <script>
 import cardSection from './cardSection.vue'
 import ParallaxSection from './ParallaxSection.vue'
+import CounterSection from './CounterSection.vue';
 export default {
     data() {
         return {
@@ -12,7 +13,8 @@ export default {
     }, 
     components:{
         cardSection,
-        ParallaxSection
+        ParallaxSection,
+        CounterSection
     }
 }
 </script>
@@ -114,8 +116,8 @@ export default {
             </div>
         </div>
         <cardSection/>
-        <ParallaxSection class="text-center"/>
-        <div class="counter"></div>
+        <ParallaxSection/>
+        <CounterSection/>
     </main>
 </template>
                                
@@ -251,32 +253,5 @@ export default {
     }
 }
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
-.counter {
-  animation: counter 5s infinite alternate ease-in-out;
-     counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-.counter::after {
-  content: counter(num);
-}
-
-@keyframes counter {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 100;
-  }
-  50% {
-    --num: 100;
-  }
-}
 
 </style>
