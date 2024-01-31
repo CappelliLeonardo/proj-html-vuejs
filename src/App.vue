@@ -30,18 +30,16 @@ export default {
 </script>
 
 <template>
-    <h1>
-        Mia App
-    </h1>
+    
 
     <AppHeader />
 
     <AppMain />
-
+ <ContactUsSection/>
+    <AboutUsSection/>
     <AppFooter />
 
-    <ContactUsSection/>
-    <AboutUsSection/>
+   
 </template>
 
 <style lang="scss">
