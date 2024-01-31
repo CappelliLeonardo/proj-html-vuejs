@@ -31,7 +31,7 @@ export default {
 
             setTimeout(() => {
                 this.submitted = true
-            }, 1000)
+            }, 2000)
 
             
         }
@@ -62,14 +62,14 @@ export default {
                                 <div class="col d-flex flex-column">
                                     <label for="name">Your Name</label>
                                     <input type="text"  id="name" col="5" v-model="form.name.value">
-                                    <span v-if="clicked && form.name.required && form.name.value === ''" style="color: red">
+                                    <span v-if="clicked && submitted && form.name.required && form.name.value === ''" style="color: red">
                                         The Field Is Required
                                     </span>
                                 </div>
                                 <div class="col d-flex flex-column ">
                                     <label for="email">Your Email</label>
                                     <input type="text" id="email" col="5" v-model="form.email.value">
-                                    <span v-if="clicked && form.email.required && form.email.value === ''" style="color: red">
+                                    <span v-if="clicked && submitted && form.email.required && form.email.value === ''" style="color: red">
                                         The Field Is Required
                                     </span>
                                 </div>
@@ -78,7 +78,7 @@ export default {
                                 <div class="col d-flex flex-column">
                                     <label for="subject">Subject</label>
                                     <input type="text" id="subject" col="5" v-model="form.subject.value">
-                                    <span v-if="clicked && form.subject.required && form.subject.value ===''" style="color: red">
+                                    <span v-if="clicked && submitted && form.subject.required && form.subject.value ===''" style="color: red">
                                         The Field Is Required
                                     </span>
                                 </div>
@@ -95,6 +95,13 @@ export default {
                                 </div>
                             </div>
                             <div class="row loader" v-if="clicked && !submitted"></div>
+                            <div class="row" v-if="clicked && submitted && form.subject.required && form.subject.value ===''">
+                                <div class="col">
+                                    <p class="banner">
+                                        One Or More Fields Have An Error. Please Check And Try Again.
+                                    </p>
+                                </div>
+                            </div>
                         </form>
                     </div>
 
@@ -301,4 +308,11 @@ iframe{
       -webkit-animation: spin 2s linear infinite;
       animation: spin 2s linear infinite;
     }
+
+.banner{
+    border: 1px solid yellow;
+    text-align: center;
+    padding: 3px;
+    margin-top: 30px;
+}
 </style>
