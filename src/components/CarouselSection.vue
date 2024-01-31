@@ -78,12 +78,7 @@ export default {
         :modules="modules"
         class="mySwiper "
         
-        
-        
-        
-      >
-      
-
+        >
         <swiper-slide v-for="(elem , i) in carouselCards">
           <div class="carousel-card">
             <div class="img-box">
@@ -98,15 +93,11 @@ export default {
       <button class="next">
          <i class="fa-solid fa-chevron-right"></i>
       </button> 
-      
-      
     </div> 
   </div>
+      
+        
 
-  <!-- 
-    
-
- -->
 </template>
 
 <style lang="scss" scoped>
@@ -158,6 +149,7 @@ export default {
         width: 400px;
         height: 300px;
         overflow: hidden;
+        object-fit: contain;
         img {
           height: 100%;
           width: 100%;
