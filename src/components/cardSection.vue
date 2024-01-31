@@ -61,6 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/main.scss" as *;
+@import "../assets/scss/partials/variables.scss";
 .card-section{
     height: 1400px;
     background-color: black;
@@ -105,5 +106,8 @@ export default {
             }
         }
     }
+  .icons-box >*:hover{
+    color: $orange-color;
+  }
 }
 </style>
