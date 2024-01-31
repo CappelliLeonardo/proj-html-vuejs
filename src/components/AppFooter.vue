@@ -2,6 +2,40 @@
 export default {
     data() {
         return {
+            information: [
+                {
+                    title: "Product Support"
+                },
+                {
+                    title: "Checkout"
+                },
+                {
+                    title: "Report Abuse"
+                },
+                {
+                    title: "My Account"
+                },
+                {
+                    title: "Order Status"
+                },
+            ],
+            support: [
+                {
+                    title: "Policies & Rules"
+                },
+                {
+                    title: "Privacy Policy"
+                },
+                {
+                    title: "License Policy"
+                },
+                {
+                    title: "My Account"
+                },
+                {
+                    title: "Locality"
+                },
+            ]
 
         };
     },
@@ -12,11 +46,11 @@ export default {
 </script>
 
 <template>
+    
     <footer  class="container-fluid">
-        
+       <hr> 
         <div class="container-md">
             <div class="row">
-
                 <div class="col-sm-12 col-md-4 col-lg-3 mb-3 space ">
                     <div class="text-left">
                         <h3>BOOKINGS</h3>
@@ -29,8 +63,7 @@ export default {
                         </h6>
                         <h6>
                              Email: <a href="#">demo@example.com</a>
-                        </h6>
-                       
+                        </h6>                       
                     </div>
                 </div>
 
@@ -38,11 +71,8 @@ export default {
                     <div class="text-left">
                         <h3>INFORMATION</h3>
                         <ul>
-                            <li>Product Support</li>
-                            <li>Checkout</li>
-                            <li>Report Abuse</li>
-                            <li>Redeem Voucher</li>
-                            <li>Order Status</li>
+                            <li v-for="(pippo,i) in information" :key="i" >{{pippo.title}}</li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -51,11 +81,7 @@ export default {
                     <div class="text-left">
                         <h3>SUPPORT</h3>
                         <ul>
-                            <li>Policies & Rules</li>
-                            <li>Privacy Policy</li>
-                            <li>License Policy</li>
-                            <li>My Account</li>
-                            <li>Locality</li>
+                            <li v-for="(pluto,i) in information" :key="i" >{{pluto.title}} </li>
                         </ul>
                     </div>
                 </div>
@@ -68,14 +94,13 @@ export default {
                     <div>
                         <textarea   placeholder="Message"></textarea>  
                     </div>
-
                     <button class="form-control">SEND MESSAGE</button>
                 </div>
-
-
             </div>
         </div>
+
         <hr>
+
         <div class="text-center">
             <h6>© 2024 All Rights Reserved. Developed By TemplateMela</h6>
         </div>

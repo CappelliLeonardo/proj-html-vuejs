@@ -2,7 +2,93 @@
 export default {
     data() {
         return {
-
+            navigazione: [
+                
+            {
+                title:"Home"                
+            },
+            {
+                title:"Blog"
+            },
+            {
+                title:"Gallery"
+            },
+            {
+                title:"Events"
+            },
+            {
+                title:"About Us"
+            },
+            {
+                title:"Contact Us"
+            },
+            {
+                title:"Shop"
+            },
+            ],
+            event: [
+            {
+                title:"Choral Music"
+            },
+            {
+                title:"Concert Band"
+            },
+            {
+                title:"Opera Concerts"
+            },
+            {
+                title:"Symphony Orchestra"
+            },
+            {
+                title:"Family Concerts"
+            },
+            ],
+            shop: [
+            {
+                title:"Product Type"
+            },
+            {
+                title:"Shop Page"
+            },
+            
+            ],
+            ProductType: [
+            {
+                title:"Simple Product"
+            },
+            {
+                title:"External/Affiliate Product"
+            },
+            {
+                title:"Downloadable Product"
+            },
+            {
+                title:"Group Product"
+            },
+            {
+                title:"In-Stock Product"
+            },
+            {
+                title:"Variable Product"
+            },
+            ],
+            ShopPage : [
+            {
+                title:"Checkout"
+            },
+            {
+                title:"Cart"
+            },
+            {
+                title:"Downloadable Product"
+            },
+            {
+                title:"Downloads"
+            },
+            {
+                title:"My account"
+            },
+            ]
         };
     },
     methods: {
@@ -28,75 +114,33 @@ export default {
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item active">
-                                    Home
-                                </li>
-                                <li class="nav-item">
-                                    Blog
-                                </li>
-                                <li class="nav-item  ">
-                                    Gallery
-                                </li>
-                                    
-                                <li class=" nav-item  dropdown "  data-toogle="dropdown">
-                                    Events
-                                        <ul class="dropdown-menu">
-                                            <li>Choral Music</li>
-                                            <hr>
-                                            <li>Concert Band</li>
-                                            <hr>
-                                            <li>Opera Concerts</li>
-                                            <hr>
-                                            <li>Symphony Orchestra</li>
-                                            <hr>
-                                            <li>Family Concerts</li>
-                                        </ul>
-                                </li>
-                                
-                
-                                <li class="nav-item ">
-                                    About Us
-                                </li>
-                                <li class="nav-item ">
-                                    Contact Us
-                                </li>
-                                <li class="nav-item dropdown" data-toogle="dropdown">
-                                    Shop
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown"  data-toogle="dropdown">
-                                                Product Type
-                                                    <ul class="dropdown-menu">
-                                                        <li>Simple Product</li>
-                                                        <hr>
-                                                        <li>External/Affiliate Product</li>
-                                                        <hr>
-                                                        <li>>Downloadable Product</li>
-                                                        <hr>
-                                                        <li>Group Product</li>
-                                                        <hr>
-                                                        <li>In-Stock Product</li>
-                                                        <hr>
-                                                        <li>Variable Product</li>
-                                                    </ul>
+                                <li v-for="(x,i) in navigazione" :key="i" :class="i==3 || i==6?'dropdown':''" class="nav-item ">
+                                   <a href="#nogo">
+                                    {{x.title}}
+                                   </a>
+                                    <ul v-if="i==3"  class="dropdown-menu">
+                                            <li v-for="(y,l) in event" :key="l">
+                                                {{y.title}}
                                             </li>
-                                            <hr>
-                                            <li  class="dropdown"  data-toogle="dropdown">
-                                                Shop Page
-                                                    <ul class="dropdown-menu">
-                                                        <li>Checkout</li>
-                                                        <hr>
-                                                        <li>Cart</li>
-                                                        <hr>
-                                                        <li>>Downloadable Product</li>
-                                                        <hr>
-                                                        <li>Downloads</li>
-                                                        <hr>
-                                                        <li>My account</li>
-                                                        
-                                                    </ul>
-                                            </li>
-                                        </ul>
-                                </li>
+                                                                                        
+                                    </ul>
+                                    <ul v-if="i==6"  class="dropdown-menu">
+                                        <li v-for="(top,k) in shop" :key="k" :class="k==1 || k==2?'dropdown-menu':''">
+                                            {{ top.title }}
+                                            <ul  class="dropdown-menu">
+                                                <li v-for="(plu,j) in ProductType" :key="j">
+                                                 {{plu.title}}
+                                                </li>
+                                            </ul>
+                                             <ul   class="dropdown-menu">
+                                                <li v-for="(min,y) in ShopPage " :key="y">
+                                                    {{min.title}}
+                                                </li>
+                                            </ul>  
+                                            
+                                        </li>
+                                    </ul>
+                                </li>                                                                                                                                                                                                      
                             </ul>
                         </div>
                     </div>
