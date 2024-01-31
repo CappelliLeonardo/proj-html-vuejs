@@ -1,5 +1,5 @@
 <script>
-
+import CarouselSection from './CarouselSection.vue';
 export default {
     data() {
         return {
@@ -10,7 +10,7 @@ export default {
 
     },
     components:{
-        
+        CarouselSection
     }
 }
 </script>
@@ -44,6 +44,8 @@ export default {
             </div>
             
         </div>
+       
+        <CarouselSection/>
     </div>
     
 </template>
@@ -72,7 +74,7 @@ export default {
             }
         }
     }
-
+    
 }
 
 
@@ -84,7 +86,7 @@ export default {
 
 .counter {
     color: white;
-  animation: counter 5s forwards ease-in-out;
+  animation: counter 3s forwards ease-in-out;
     counter-reset: num var(--num);
   font: 800 40px system-ui;
   padding: 2rem;
@@ -110,7 +112,7 @@ export default {
 
 .counter-1 {
     color: white;
-  animation: counter 5s forwards ease-in-out;
+  animation: counter 3s forwards ease-in-out;
     counter-reset: num var(--num);
   font: 800 40px system-ui;
   padding: 2rem;
@@ -136,7 +138,7 @@ export default {
 
 .counter-2 {
     color: white;
-  animation: counter 5s forwards ease-in-out;
+  animation: counter 3s forwards ease-in-out;
     counter-reset: num var(--num);
   font: 800 40px system-ui;
   padding: 2rem;
@@ -164,7 +166,7 @@ export default {
 
 .counter-3 {
     color: white;
-  animation: counter 5s forwards ease-in-out;
+  animation: counter 3s forwards ease-in-out;
     counter-reset: num var(--num);
   font: 800 40px system-ui;
   padding: 2rem;
@@ -186,3 +188,5 @@ export default {
 </style>
 
 
+<!-- 
+             -->
