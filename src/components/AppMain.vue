@@ -26,10 +26,10 @@ export default {
                 <div id="carouselExampleFade" class="carousel slide carousel-fade col-12 jumbotron-1 w-100 p-0">
                         <div class="carousel-inner w-100 h-100">
                             <div class="carousel-item w-100 h-100 active" data-bs-interval="1000">
-                                <img src="../../public/instrumental-rock/image.png" class="d-block w-100 h-100 " alt="...">
+                                <img src="/instrumental-rock/image.png" class="d-block w-100 h-100 " alt="...">
                             </div>
                             <div class="carousel-item w-100 " data-bs-interval="1000" >
-                                <img src="../../public/instrumental-rock/image (1).png" class="d-block w-100 h-100 " alt="...">
+                                <img src="/instrumental-rock/image (1).png" class="d-block w-100 h-100 " alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev p-0" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
