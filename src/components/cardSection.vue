@@ -39,7 +39,7 @@ export default {
         <p id="title-1">who we are</p>
         <p id="title-2">sense the jazz</p>
         <div class="card-container d-flex justify-content-between  ">
-            <div v-for="[elem,i] in cards" :key="i"  class="card text-center ">
+            <div v-for="(elem,i) in cards" :key="i"  class="card text-center ">
                 <div class="img-box">
                     <img :src="elem.img" alt="">
                 </div>
