@@ -2,11 +2,39 @@
 export default {
     data() {
         return {
-
+            clicked: false,
+            submitted: false,
+            form: {
+                name:{
+                    required: true,
+                    value: ''
+                },
+                email:{
+                    required: true,
+                    value: ''
+                },
+                subject:{
+                    required: true,
+                    value: ''
+                },
+            }
         };
     },
     methods: {
+        onSubmit() {
+            this.clicked = true;
+            
 
+            setTimeout(() => {
+                console.log('Facciamo finta di chiamare le API')
+            }, 1000)
+
+            setTimeout(() => {
+                this.submitted = true
+            }, 1000)
+
+            
+        }
     }
 }
 </script>
@@ -29,21 +57,30 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <form action="" class="p-5">
+                        <form @submit.prevent="onSubmit()" class="p-5">
                             <div class="row">
                                 <div class="col d-flex flex-column">
-                                    <label for="name"> Your Name</label>
-                                    <input type="text" required="" oninvalid="this.setCustomValidity('Please Enter your name')" id="name" class="" col="5">
+                                    <label for="name">Your Name</label>
+                                    <input type="text"  id="name" col="5" v-model="form.name.value">
+                                    <span v-if="clicked && form.name.required && form.name.value === ''" style="color: red">
+                                        The Field Is Required
+                                    </span>
                                 </div>
                                 <div class="col d-flex flex-column ">
                                     <label for="email">Your Email</label>
-                                    <input type="text" id="email" class="">
+                                    <input type="text" id="email" col="5" v-model="form.email.value">
+                                    <span v-if="clicked && form.email.required && form.email.value === ''" style="color: red">
+                                        The Field Is Required
+                                    </span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col d-flex flex-column">
                                     <label for="subject">Subject</label>
-                                    <input type="text" id="subject" class="">
+                                    <input type="text" id="subject" col="5" v-model="form.subject.value">
+                                    <span v-if="clicked && form.subject.required && form.subject.value ===''" style="color: red">
+                                        The Field Is Required
+                                    </span>
                                 </div>
                             </div>
                             <div class="row">
@@ -57,6 +94,7 @@ export default {
                                     <button type="submit" class="">SUBMIT</button>
                                 </div>
                             </div>
+                            <div class="row loader" v-if="clicked && !submitted"></div>
                         </form>
                     </div>
 
@@ -172,10 +210,10 @@ main > .container-fluid:nth-child(2){
 
 form, input, textarea{
     border: 1px solid rgba(128, 128, 128, 0.6);
-    outline: none;
     background-color: #000000;
-    text-align: left;
     color:white;
+    outline: none;
+    text-align: left;
     padding:10px;
     textarea{
         resize: vertical;
@@ -186,9 +224,9 @@ form, input, textarea{
         color: white;
         font-weight: bold;
         background:transparent;
-        border:1px solid #F2870C;
+        border:1px solid $orange-color;
         &:hover{
-                background-color: #F2870C;
+                background-color: $orange-color;
                 transition-duration: 200ms;
             }
     }
@@ -205,14 +243,14 @@ label{
 }
 
 h6{
+    color: $orange-color;
+}
+h6, h2{
     text-align: left;
-    color: #F2870C;
 }
 h2{
-    text-align: left;
     padding-top:10px;
     padding-bottom:20px;
-    font-weight: bolder;
     font-size: 3rem;
 }
 
@@ -228,8 +266,8 @@ ul{
 i{
     font-size: 2rem;
     &:hover{
-                color: #F2870C;
-                transition-duration: 200ms;
+            color: #F2870C;
+            transition-duration: 200ms;
             }
 }
 
@@ -237,4 +275,30 @@ iframe{
     width: 100%;
     height: 450px;
 }
+
+// LOADER 
+.loader {
+      border: 16px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader {
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid grey;
+      width: 40px;
+      height: 40px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
 </style>
