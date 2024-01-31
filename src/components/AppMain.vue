@@ -103,7 +103,9 @@ export default {
                             <div class="icon-box">
                                 <i class="fa-solid fa-play"></i>
                             </div>
-                            <h2 class="text-white">NEW MUSIC VIDEO</h2>
+                            <h2 class="text-white">
+                                NEW MUSIC VIDEO
+                            </h2>
                         </div>
                     </button >
 

@@ -170,10 +170,10 @@ export default {
   padding: 2rem;
 }
 .counter-3::after {
-    content: pippo(num);
+    content: counter(num);
 }
 
-@keyframes pippo {
+@keyframes counter {
 0% {
     --num: 0;
   }
