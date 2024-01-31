@@ -29,18 +29,20 @@ export default {
 }
 </script>
 
+
+
 <template>
-    
 
     <AppHeader />
-
     <AppMain />
- <ContactUsSection/>
+    <ContactUsSection/>
     <AboutUsSection/>
     <AppFooter />
+    
+</template>
+
 
    
-</template>
 
 <style lang="scss">
 @use "assets/scss/main" as *;

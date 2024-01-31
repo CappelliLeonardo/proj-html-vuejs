@@ -45,7 +45,7 @@ export default {
                     <div class="absolute-box d-flex">
                         <div class="info-cell">
                             <div class="logo-box">
-                                <img src="../../public/instrumental-rock/speaker.svg" alt="">
+                                <img src="/instrumental-rock/speaker.svg" alt="">
                             </div>
                             <div class="info-box text-center">
                                 <ul>
@@ -58,7 +58,7 @@ export default {
                         </div>
                         <div class="info-cell">
                             <div class="logo-box">
-                                <img src="../../public/instrumental-rock/disc.svg" alt="">
+                                <img src="/instrumental-rock/disc.svg" alt="">
                             </div>
                             <div class="info-box text-center">
                                 <ul>
@@ -71,7 +71,7 @@ export default {
                         </div>
                         <div class="info-cell">
                             <div class="logo-box">
-                                <img src="../../public/instrumental-rock/headphones.svg" alt="">
+                                <img src="/instrumental-rock/headphones.svg" alt="">
                             </div>
                             <div class="info-box text-center ">
                                 <ul>
