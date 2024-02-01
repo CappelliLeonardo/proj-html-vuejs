@@ -56,16 +56,25 @@ export default {
         width: 1400px;
         height: 800px;
         padding: 50px;
+        padding-top:90px ;
         display: flex;
-        justify-content: space-between;
+        align-content: flex-start;
+        
         
     }
+    p{
+        font-family: var(--global-body-font-family);
+        color: #cccccc;
+    }
     .container-jazz{
-        width: 680px;
+        width:600px ;
+    }
+    h4 {
+        color: orange;
     }
         
     img {
-        width:680px ;
+        width:600px ;
         height: 500px;
         max-width: 100%;
         max-height: 100%;
@@ -83,5 +92,11 @@ export default {
 
     button:hover{
     background-color:#F2870C ;
+    }
+
+    h2{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 48px;
     }
 </style>

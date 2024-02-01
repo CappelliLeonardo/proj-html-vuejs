@@ -56,7 +56,7 @@ export default {
 @use "../assets/scss/main.scss" as *;
 .container-fluid{
     background-color: black;
-    height: 1200px;
+    height: 400px;
     .counter-container{
         width: 70%;
         margin: 0 auto;

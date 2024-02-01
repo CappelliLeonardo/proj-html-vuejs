@@ -22,9 +22,7 @@ export default {
             {
                 title:"Contact Us"
             },
-            {
-                title:"Shop"
-            },
+            
             ],
             event: [
             {
@@ -114,42 +112,48 @@ export default {
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li v-for="(x,i) in navigazione" :key="i" :class="i==3 || i==6?'dropdown':''" class="nav-item ">
+                                <li v-for="(x,i) in navigazione" :key="i" :class="i==3?'drop':''">
                                 <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
                                 <router-link v-else-if="i==4" :to="{name:'AboutUsSection'}" >{{ x.title }}</router-link>
-                                <router-link v-else-if="i==5" :to="{name:'ContactUsSection'}" >{{ x.title }}</router-link>
+                                <router-link v-else-if="i==5" :to="{name:'ContactUsSection'}" >{{ x.title }}                                   
+                                </router-link>
                                 <a v-else href="#nogo">
                                 {{x.title}}
                                 </a>
-                                    <ul v-if="i==3"  class="dropdown-menu">
-                                            <li v-for="(y,l) in event" :key="l">
-                                                {{y.title}}
+                                </li>
+                                <li>
+                                    <a href="#">Shop</a>  <i class="fas fa-angle-down"></i>
+                                        <ul>
+                                            <li><a href="#">ProductType</a>
+                                                <ul>
+                                                    <li><i class="fas fa-arrow-right"></i><a href="#">Simple Product</a></li>
+                                                    <li><i class="fas fa-arrow-right"></i><a href="#">External/Affiliate Product</a></li>
+                                                    <li><i class="fas fa-arrow-right"></i><a href="#">Downloadable Product</a></li>
+                                                </ul>
                                             </li>
-                                                                                        
-                                    </ul>
-                                    <ul v-if="i==6"  class="dropdown-menu">
-                                        <li v-for="(top,k) in shop" :key="k" :class="k==0 || k==1?'dropdown-menu':''">
-                                            {{ top.title }}
-                                            <ul  class="dropdown-menu">
-                                                <li v-for="(plu,j) in ProductType" :key="j">
-                                                 {{plu.title}}
-                                                </li>
-                                            </ul>
-                                             <ul   class="dropdown-menu">
-                                                <li v-for="(min,y) in ShopPage " :key="y">
-                                                    {{min.title}}
-                                                </li>
-                                            </ul>  
-                                            
-                                        </li>
-                                    </ul>
-                                </li>                                                                                                                                                                                                      
-                            </ul>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#">ShopPage</a>
+                                                <ul>
+                                                    <li><i class="fas fa-arrow-right"></i><a href="#">Simple Product</a></li>
+                                                    <li><i class="fas fa-arrow-right"></i><a href="#">External/Affiliate Product</a></li>
+                                                    <li><i class="fas fa-arrow-right"></i><a href="#">Downloadable Product</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                </li>
+                                
+                                    
+                               
+                                
+                            </ul>                                                                                                                                                                            
                         </div>
                     </div>
                 </div>
             </div>
-
+            
+                
+            
        
         
         
@@ -164,26 +168,67 @@ export default {
     background-color: black;
     color: white;
 }
+.container-drop{
+    width: 300px;
+    color: white;
+    background-color:#1F1F1F ;
+    opacity: 0;   
+}
+
+
+.navbar ul li ul {
+  display: none;
+}
+
+.navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  right:0;
+  width: 200px;
+  margin-top: 1rem;
+}
+
+.navbar ul li:hover ul li,
+.navbar ul li ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+}
+
+#navbar ul li:hover ul li a {
+  color: #333;
+}
+#navbar ul li:hover ul li:hover {
+  background: #e0e0e0;
+  color: inherit;
+}
+
+#navbar ul li ul li:hover ul {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+
 
 li {
     margin-right: 40px;
+    border-bottom: 1px solid;
 }
 
 .img{ 
     width: 100%;
     
 }
-.dropdown:hover .dropdown-menu {
-    background-color:#1F1F1F ;
-    color: white;
-    display: block;
-    margin-top: 0; /* remove the gap so it doesn't close */
+.drop:hover .container-drop {
+   
+    opacity: 1;
+     
 }
-.dropdown .dropdown-menu > li {
-    padding: 10px;
-    
-    
-}
+
+
 
 .active {
     color: orange;

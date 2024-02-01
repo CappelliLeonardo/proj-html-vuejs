@@ -146,6 +146,7 @@ footer .row > .space {
     margin-right: 70px;
     margin-top: 70px;
     margin-bottom: 70px;
+    margin-top: 70px;
 }
 
 textarea {
