@@ -84,8 +84,9 @@ export default {
         height: 100%;
         width: 85%;
         overflow:hidden;
-        object-fit: cover;
+        
         img{
+        object-fit: contain;
         height: 100%;
         width: 100%;
         transition: 0.5s transform  ease-in-out;
