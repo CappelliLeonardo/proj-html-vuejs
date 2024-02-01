@@ -125,7 +125,7 @@ export default {
                                                                                         
                                     </ul>
                                     <ul v-if="i==6"  class="dropdown-menu">
-                                        <li v-for="(top,k) in shop" :key="k" :class="k==1 || k==2?'dropdown-menu':''">
+                                        <li v-for="(top,k) in shop" :key="k" :class="k==0 || k==1?'dropdown-menu':''">
                                             {{ top.title }}
                                             <ul  class="dropdown-menu">
                                                 <li v-for="(plu,j) in ProductType" :key="j">
