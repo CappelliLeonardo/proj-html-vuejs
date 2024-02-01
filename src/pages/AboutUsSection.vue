@@ -1,6 +1,6 @@
 <script>
 import ParallaxForAbout from '../components/ParallaxSection.vue';
-import CounterSection from '../components/CounterSection.vue';
+import CounterSectionFourAbout from '../components/CounterSectionFourAbout.vue';
 import CardForAbout from '../components/CardForAbout.vue';
 import AccordionSection from '../components/AccordionSection.vue';
 import JazzSection from '../components/JazzSection.vue';
@@ -12,7 +12,7 @@ export default {
     },
     components: {
         ParallaxForAbout,
-        CounterSection,
+        CounterSectionFourAbout,
         CardForAbout,
         AccordionSection,
         JazzSection,
@@ -46,7 +46,7 @@ export default {
         <JazzSection/>
         <ParallaxForAbout/>
         <AccordionSection/>
-        <CounterSection/>
+        <CounterSectionFourAbout/>
         <CardForAbout/>
         
 

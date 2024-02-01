@@ -57,7 +57,7 @@ export default {
     background-color: black;
     text-align: center;
     color: white;
-    padding-top: 150px;
+   padding-top: 50px; 
     #title-1{
         font-size: 1.5rem;
         text-transform: uppercase;
