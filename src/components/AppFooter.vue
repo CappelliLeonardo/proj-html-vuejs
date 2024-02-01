@@ -110,12 +110,14 @@ export default {
 
 <style lang="scss" scoped>
 .container-fluid{
-    padding: 150px 0;
+    padding:0px 0px 150px 0px;
     height: 700px;
     background-color: black;
     color: white; 
 }
-
+hr{
+    margin:0px 0px 1rem 0px!important;
+}
 footer .row h3{
     margin-bottom: 20px;
 }

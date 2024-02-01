@@ -71,6 +71,7 @@ export default {
       <swiper
         ref="{swiperRef}"
         :slidesPerView="3"
+        :spaceBetween="30"
         :navigation="{
               prevEl: '.prev',
               nextEl: '.next',
@@ -159,13 +160,13 @@ export default {
             transition-duration: 300ms;
           }
         }
-        & :nth-child(3) {
-          color: $orange-color;
-        }
-        & :nth-child(4) {
-          color: darkgray;
-          font-size: 1.2rem;
-        }
+      }
+      & :nth-child(3) {
+        color: $orange-color;
+      }
+      & :nth-child(4) {
+        color: darkgray;
+        font-size: 1.2rem;
       }
     }
   }
@@ -175,7 +176,7 @@ export default {
     animation-name: appear;
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
-    transition-timing-function: ease;
+    transition-timing-function: ease-in-out;
   }
 }
 @keyframes appear {

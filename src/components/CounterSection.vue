@@ -17,7 +17,7 @@ export default {
 
 <template>
     <div class="container-fluid ">
-        <div class="counter-container d-flex align-items-center justify-content-around text-white text-center">
+        <div class="counter-container d-flex align-items-center justify-content-center  text-white text-center">
             <div class="counter-box">
                 <img src="../../public/instrumental-rock/assets/image (13).svg" alt="">
                 <div class="counter p-1 my-2">
@@ -66,6 +66,12 @@ export default {
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
+        & :nth-child(2){
+            margin: 0px 3rem;
+        }
+        & :nth-child(3){
+            margin: 0px 3rem;
+        }
         .counter-box{
             img{
                 width: 70px;

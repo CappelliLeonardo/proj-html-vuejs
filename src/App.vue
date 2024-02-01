@@ -1,9 +1,9 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+// import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
-import ContactUsSection from './components/ContactUsSection.vue';
-import AboutUsSection from './components/AboutUsSection.vue';
+// import ContactUsSection from './components/ContactUsSection.vue';
+// import AboutUsSection from './components/AboutUsSection.vue';
 
 import axios from 'axios';
 
@@ -15,10 +15,10 @@ export default {
     },
     components: {
         AppHeader,
-        AppMain,
+        // AppMain,
         AppFooter,
-        ContactUsSection,
-        AboutUsSection,
+        // ContactUsSection,
+        // AboutUsSection,
     },  
     methods: {
 
@@ -34,10 +34,10 @@ export default {
 <template>
 
     <AppHeader />
-    <AppMain />
-    <ContactUsSection/>
-    <AboutUsSection/>
+    <router-view></router-view>
+   
     <AppFooter />
+    
     
 </template>
 

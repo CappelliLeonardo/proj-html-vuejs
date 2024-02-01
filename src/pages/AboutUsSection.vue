@@ -1,9 +1,9 @@
 <script>
-import ParallaxForAbout from './ParallaxForAbout.vue';
-import CounterSection from './CounterSection.vue';
-import CardForAbout from './CardForAbout.vue';
-import AccordionSection from './AccordionSection.vue';
-import JazzSection from './JazzSection.vue';
+import ParallaxForAbout from '../components/ParallaxSection.vue';
+import CounterSection from '../components/CounterSection.vue';
+import CardForAbout from '../components/CardForAbout.vue';
+import AccordionSection from '../components/AccordionSection.vue';
+import JazzSection from '../components/JazzSection.vue';
 export default {
     data() {
         return {

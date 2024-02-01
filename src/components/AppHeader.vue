@@ -100,11 +100,11 @@ export default {
 <template>
     <header class="container-fluid" >
 
-        <div class="container-md">
+       
 
             <div class="row">
 
-                <div class="col">
+                <div class="col-12">
                     
                     <div class=" p-0 navbar navbar-expand-md ">
                         <div>
@@ -115,9 +115,12 @@ export default {
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li v-for="(x,i) in navigazione" :key="i" :class="i==3 || i==6?'dropdown':''" class="nav-item ">
-                                   <a href="#nogo">
-                                    {{x.title}}
-                                   </a>
+                                <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
+                                <router-link v-else-if="i==4" :to="{name:'AboutUsSection'}" >{{ x.title }}</router-link>
+                                <router-link v-else-if="i==5" :to="{name:'ContactUsSection'}" >{{ x.title }}</router-link>
+                                <a v-else href="#nogo">
+                                {{x.title}}
+                                </a>
                                     <ul v-if="i==3"  class="dropdown-menu">
                                             <li v-for="(y,l) in event" :key="l">
                                                 {{y.title}}
@@ -147,8 +150,9 @@ export default {
                 </div>
             </div>
 
-        </div>
-
+       
+        
+        
     </header>
 </template>
 

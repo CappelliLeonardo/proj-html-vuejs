@@ -69,8 +69,9 @@ export default {
     color: white;
     padding-top: 150px;
     #title-1{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
+        color: $orange-color;
     }
     #title-2{
         font-size: 4rem;
