@@ -23,31 +23,26 @@ export default {
     methods: {
         onSubmit() {
             this.clicked = true;
-            
-
             setTimeout(() => {
                 console.log('Facciamo finta di chiamare le API')
             }, 1000)
-
             setTimeout(() => {
                 this.submitted = true
             }, 2000)
-
-            
         }
     }
 }
 </script>
 
 <template>
-    <main>
+    <div class="bg-color">
         <div class="container-fluid py-5">
             <div class="container py-5 ">
                 <h1>
                     CONTACT US
                 </h1>
                 <div>
-                    <a href="https://wordpressthemes.live/WP01/WP015/">Home</a>
+                    <router-link :to="{name:'AppMain'}">Home</router-link>
                     <span> /</span>
                     <span> Contact Us</span>
                 </div>
@@ -185,17 +180,17 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="container-fluid g-0 ">
+        <div class="container-fluid g-0 d-flex">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11526.40698209097!2d10.874340400000001!3d43.760366299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a65ce556f5ac7%3A0x435a55ce97279556!2s50050%20Cerreto%20Guidi%20FI!5e0!3m2!1sit!2sit!4v1706613715209!5m2!1sit!2sit"
-            style="border:none;" allowfullscreen=""
+            style=""
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </main>
+    </div>
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/variables.scss";
-main > .container-fluid:nth-child(2){
+.bg-color > .container-fluid:nth-child(2){
     background-color: #000000;
     padding-top: 100px;
     padding-bottom:100px;
@@ -205,7 +200,6 @@ main > .container-fluid:nth-child(2){
     color: white;
     text-align: center;
     .container{
-        
         a{
             text-decoration: underline;
             &:hover{
@@ -284,17 +278,6 @@ iframe{
 }
 
 // LOADER 
-.loader {
-      border: 16px solid #f3f3f3;
-      border-top: 8px solid #3498db;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -303,9 +286,8 @@ iframe{
       border: 8px solid #f3f3f3;
       border-radius: 50%;
       border-top: 8px solid grey;
-      width: 40px;
-      height: 40px;
-      -webkit-animation: spin 2s linear infinite;
+      width: 50px;
+      height: 50px;
       animation: spin 2s linear infinite;
     }
 
