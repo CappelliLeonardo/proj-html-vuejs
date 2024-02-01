@@ -1,5 +1,5 @@
 <script>
-
+import CarouselSection from './CarouselSection.vue';
 export default {
     data() {
         return {
