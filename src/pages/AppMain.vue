@@ -23,7 +23,7 @@ export default {
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 jumbotron-1">
+        <div class="col-12 jumbotron-1 p-0 position-relative text-center">
             <Jumbosection/>
         </div>
         <div class="col-12 info-section">
@@ -140,7 +140,7 @@ export default {
 @use "../assets/scss/main.scss" as *;
 @import "../assets/scss/partials/variables.scss";
 .jumbotron-1 {
-  height: 800px;
+  height: 1000px;
   .carousel {
     img {
       width: 100%;
