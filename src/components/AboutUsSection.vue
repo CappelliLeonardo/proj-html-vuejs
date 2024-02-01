@@ -24,11 +24,10 @@ export default {
 </script>
 
 <template>
-    CIAO
         <section>
             <div class="text-center dark ">
                 <h1>
-                    about us
+                    about us 
                 </h1>
                 <div>
                     <span id="orange">

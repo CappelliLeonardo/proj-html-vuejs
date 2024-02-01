@@ -111,7 +111,7 @@ export default {
 
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                                 <li v-for="(x,i) in navigazione" :key="i" :class="i==3?'drop':''">
                                 <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
                                 <router-link v-else-if="i==4" :to="{name:'AboutUsSection'}" >{{ x.title }}</router-link>
