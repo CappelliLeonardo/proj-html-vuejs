@@ -3,52 +3,80 @@ import CarouselSection from './CarouselSection.vue';
 export default {
     data() {
         return {
-
+          counters:[
+            {
+              title: 'concert',
+              number: 900,
+              counter:0,
+              img:'/instrumental-rock/assets/image (13).svg'
+            },
+            
+            {
+              title: 'happy clients',
+              number: 800,
+              counter:0,
+              img:'/instrumental-rock/assets/image (14).svg'
+            },
+            {
+              title: 'music awards',
+              number: 400,
+              counter:0,
+              img:'/instrumental-rock/assets/image (15).svg'
+            },
+            {
+              title: 'total songs',
+              number: 1001,
+              counter:0,
+              img:'/instrumental-rock/assets/image (16).svg'
+            }
+          ]
         };
     },
     methods: {
-
+        getTheNumers(){
+          this.counters.forEach((card,i) => {
+            let interval=setInterval(()=> {
+              if (card.counter<card.number) {
+                card.counter++
+              }
+              else{
+                clearInterval(interval)
+              }
+            },1*i)
+          }
+          )
+        }
     },
+            
+            
     components:{
         CarouselSection
+    },
+    mounted(){
+      this.getTheNumers();
     }
-}
+  }
+
 </script>
 
 <template>
     <div class="container-fluid ">
-        <div class="counter-container d-flex align-items-center justify-content-center  text-white text-center">
-            <div class="counter-box">
-                <img src="../../public/instrumental-rock/assets/image (13).svg" alt="">
+        <div class="counter-container d-flex align-items-center  text-white text-center">
+            <div v-for="(elem , i ) in counters" class="counter-box">
+                <img :src="elem.img" alt="">
                 <div class="counter p-1 my-2">
+                  {{ elem.counter }}
                 </div>
-                <h3>CONCERT</h3>
+                <h3>{{ elem.title }}</h3>
             </div>
-            <div class="counter-box">
-                <img src="../../public/instrumental-rock/assets/image (14).svg" alt="">
-                <div class="counter-1 p-1 my-2">
-                </div>
-                <h3>HAPPY CLIENTS</h3>
-            </div>
-            <div class="counter-box">
-                <img src="../../public/instrumental-rock/assets/image (15).svg" alt="">
-                <div class="counter-2 p-1 my-2">
-                </div>
-                <h3>MUSIC AWARDS</h3>
-            </div>
-            <div class="counter-box">
-                <img src="../../public/instrumental-rock/assets/image (16).svg" alt="">
-                <div class="counter-3 p-1 my-2">
-                </div>
-                <h3>TOTAL SONGS</h3>
-            </div>
-            
         </div>
-       
         <CarouselSection/>
     </div>
-    
 </template>
+    
+           
+            
+       
                                
                                
 
@@ -61,7 +89,7 @@ export default {
         width: 70%;
         margin: 0 auto;
         height: 400px;
-        background-image: url('../../public/instrumental-rock/assets/counter_parallax.jpg');
+        background-image: url('/instrumental-rock/assets/counter_parallax.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -70,13 +98,21 @@ export default {
             margin: 0px 3rem;
         }
         & :nth-child(3){
-            margin: 0px 3rem;
+            margin: 0px3rem;
         }
         .counter-box{
+          margin-left: 5px;
+          width: calc((100% / 4) - 5px);
             img{
                 width: 70px;
                 height: 100px;
                 filter: invert(1);
+            }
+            .counter{
+              font-size: 2rem;
+            }
+            h3{
+              text-transform: uppercase;
             }
         }
     }
@@ -84,113 +120,7 @@ export default {
 }
 
 
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
 
-.counter {
-    color: white;
-  animation: counter 3s forwards ease-in-out;
-    counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-.counter::after {
-    content: counter(num);
-}
-
-@keyframes counter {
-0% {
-    --num: 0;
-  }
-
-100%{
-    --num:900
-}   
-}
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
-.counter-1 {
-    color: white;
-  animation: counter 3s forwards ease-in-out;
-    counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-.counter-1::after {
-    content: counter(num);
-}
-
-@keyframes counter {
-0% {
-    --num: 0;
-  }
-
-100%{
-    --num:800
-}   
-}
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
-.counter-2 {
-    color: white;
-  animation: counter 3s forwards ease-in-out;
-    counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-.counter-2::after {
-    content: counter(num);
-}
-
-@keyframes counter {
-0% {
-    --num: 0;
-  }
-
-100%{
-    --num:400
-}   
-}
-
-
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
-.counter-3 {
-    color: white;
-  animation: counter 3s forwards ease-in-out;
-    counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-.counter-3::after {
-    content: counter(num);
-}
-
-@keyframes counter {
-0% {
-    --num: 0;
-  }
-
-100%{
-    --num:1001
-}   
-}
- 
 </style>
 
 
