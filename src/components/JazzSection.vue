@@ -54,10 +54,11 @@ export default {
     
     .container {
         width: 1400px;
+        height: 800px;
         padding: 50px;
         display: flex;
         justify-content: space-between;
-        align-items:flex-start;
+        
     }
     .container-jazz{
         width: 680px;

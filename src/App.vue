@@ -37,6 +37,8 @@ export default {
     <router-view></router-view>
    
     <AppFooter />
+
+    
     
     
 </template>

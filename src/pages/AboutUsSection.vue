@@ -42,29 +42,7 @@ export default {
 
         </section>
 
-        <section class="container-fluid">
-            <div class="container">
-                <div class="container-jazz ">
-                    <h4>
-                        who we are
-                    </h4>
-                    <h2>
-                        sense the jazz
-                    </h2>
-                    <p>
-                        The Story Of Jazz And Blues Society Is The Story Of Determination, Passion, Idealism,
-                        Music. Founded In 1985 And Incorporated In 1986, As A Community Based, Not-For Organization
-                        Located In Vancouver, British Columbia, The Society, From The Very Begi To Establish Vancouver 
-                        As A Centre For The Creation And Exchange Of Sounds  
-                    </p>
-                    <button>READ MORE</button>
-                </div>
-
-                <div class="boxImg">
-                    <img src="https://www.rockshots.eu/wp-content/uploads/2018/02/jesse-ramirez-R1NBUvxIdu8-unsplash-960x960.jpg" alt="">
-                </div>
-            </div>  
-        </section>
+       
         <JazzSection/>
         <ParallaxForAbout/>
         <AccordionSection/>
