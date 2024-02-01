@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/main.scss" as *;
+@import "../assets/scss/partials/variables.scss";
 .parallax-container{
     height:800px;
     background-image: url('../../public/instrumental-rock/assets/cms_parallax.jpg');
@@ -44,14 +45,23 @@ export default {
         height: 100%;
         color: white;
         padding-top: 250px;
-         button{
+        &> :nth-child(1){
+            color: $orange-color;
+        }
+        button{
                 width: 200px;
                 height: 50px;
-                background-color: white;
+                background-color: transparent;
+                border: 1px solid $orange-color;
+                transition: 0.5s background-color ease-in-out;
                  a{
-                    
+                    color: white;
                     text-decoration: none;
-                    color: black;
+                    font-size: 1rem;
+                    margin: auto;
+                    }
+                    &:hover{
+                        background-color: $orange-color;
                     }
                }
                .album{
