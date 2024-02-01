@@ -23,15 +23,15 @@ export default {
                 <img src="https://wordpressthemes.live/WP01/WP015/wp-content/uploads/2022/06/Img-02.jpg" alt="">
             </div>
                         
-            <div class="accordion accordion-flush pianista" id="accordionFlushExample">
+            <div class="accordion accordion-flush pianista ms-5" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <button class="accordion-button pt-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                              CAN I SPECIFY A DELIVERY DATE WHEN ORDERING?
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium <code>.accordion-flush</code> Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
+                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium  Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -41,7 +41,7 @@ export default {
                         </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium <code>.accordion-flush</code> Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
+                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium  Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -51,7 +51,7 @@ export default {
                         </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium  <code>.accordion-flush</code> Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
+                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium   Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
                     </div>
                                     
                 </div>
@@ -62,7 +62,7 @@ export default {
                         </button>
                     </h2>
                     <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium  <code>.accordion-flush</code> Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
+                        <div class="accordion-body">Sed Ut Perspiciatis Unde Omnis I Natus Error Voluptatem Accusantium   Doloremque Laudantium, Tota Aperiam, Eaque Ipsa.</div>
                     </div>
                                     
                 </div>
@@ -79,6 +79,10 @@ export default {
         color: white;
         
        
+    }
+    .accordion-collapse{
+        background-color: black;
+        color: white;
     }
     .pianista {
         width: calc(100% / 2);
@@ -104,7 +108,7 @@ export default {
         height: 500px;
         max-width: 100%;
         max-height: 100%;
-        
+        object-fit:contain;
     }
 
     button{

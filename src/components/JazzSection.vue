@@ -78,7 +78,7 @@ export default {
         height: 500px;
         max-width: 100%;
         max-height: 100%;
-        
+        object-fit: contain;
     }
 
     button{
