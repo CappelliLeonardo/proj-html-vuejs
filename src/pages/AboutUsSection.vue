@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    
         <section>
             <div class="text-center dark ">
                 <h1>
@@ -50,7 +50,7 @@ export default {
         <CardForAbout/>
         
 
-    </main>
+    
 </template>
 
 <style lang="scss" scoped>

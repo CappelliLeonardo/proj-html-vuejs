@@ -41,6 +41,9 @@ export default {
 @import "assets/scss/partials/reset";
 @import "assets/scss/partials/variables.scss";
 @import "../src/assets/scss/partials/variables.scss";
+router-view{
+    margin-top: 100px;
+}
 </style>
     
     

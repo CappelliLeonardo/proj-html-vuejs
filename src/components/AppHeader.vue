@@ -176,6 +176,8 @@ export default {
         height: 100px;
         background-color: black;
         color: white;
+        position: fixed;
+        z-index: 3;
     }
 li , router-link , a , i{
     transition:0.1s color ease-in-out;
