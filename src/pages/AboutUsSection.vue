@@ -25,8 +25,8 @@ export default {
 
 <template>
     
-        <section>
-            <div class="text-center dark ">
+        <section class="spazio">
+            <div class="text-center dark  ">
                 <h1>
                     about us
                 </h1>
@@ -76,7 +76,9 @@ export default {
         max-height: 100%;
         
     }
-
+    .spazio {
+        padding-top:100px;
+    }
     
 
 </style>

@@ -163,6 +163,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/partials/variables.scss';
+.row {
+    padding: 20px;
+}
 .navbar-nav > *{
         border-bottom: none;
     }
