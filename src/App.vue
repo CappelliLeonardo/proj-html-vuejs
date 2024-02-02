@@ -13,10 +13,7 @@ export default {
     },
     components: {
         AppHeader,
-        // AppMain,
         AppFooter,
-        // ContactUsSection,
-        // AboutUsSection,
     },  
     methods: {
 
@@ -26,6 +23,7 @@ export default {
     },
 }
 </script>
+       
 
 
 
@@ -33,20 +31,23 @@ export default {
 
     <AppHeader />
     <router-view></router-view>
-   
     <AppFooter />
-
-    
-    
-    
+   
 </template>
 
-
-   
-
+    
 <style lang="scss">
 @use "assets/scss/main" as *;
 @import "assets/scss/partials/reset";
 @import "assets/scss/partials/variables.scss";
 @import "../src/assets/scss/partials/variables.scss";
+router-view{
+    margin-top: 100px;
+}
 </style>
+    
+    
+
+
+   
+

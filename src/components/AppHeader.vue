@@ -110,7 +110,7 @@ export default {
                         </div>
 
 
-                        <div class="collapse navbar-collapse h-100  " id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse h-100 text-uppercase " id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center  ms-auto mb-2 mb-lg-0 h-100 ">
                                 <li v-for="(x,i) in navigazione" :key="i" >
                                 <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
@@ -173,13 +173,13 @@ export default {
 .navbar-nav > *{
         border-bottom: none;
     }
-
     .container-fluid{
         height: 100px;
         background-color: black;
         color: white;
+        position: fixed;
+        z-index: 3;
     }
-
 li , router-link , a , i{
     transition:0.1s color ease-in-out;
 }
@@ -188,9 +188,8 @@ li , router-link , a , i{
     height: 100%!important;
     padding:50px 0px;
 }
-
 .event-drop-item:hover{
-    color: $orange-color;
+    color:$orange-color!important;
 }
 
 #event-drop{
@@ -198,31 +197,34 @@ li , router-link , a , i{
     position: absolute;
     z-index: 2;
     top:90%;
-    li{
+    .event-drop-item{
         width: 300px;
         height: 50px;
         border-bottom:1px solid darkgray ;
         padding: 10px 0px 0px 10px;
         margin-right: 0px;
+        line-height: 50px;
+        color: $orange-color;
     }
 }
- #hover-item:hover #event-drop{
-    display: block;
- }
+
+#hover-item:hover #event-drop{
+   display: block;
+}
 #topolino{
-    display: none;
-    position: absolute;
-    z-index: 2;
-    top: 100%;
-    right: 0%;
-    li{
-        width: 300px;
-        height: 50px;
-        border-bottom:1px solid darkgray ;
-        padding: 10px 0px 0px 10px;
-        margin-right: 0px;
-        
-    }
+   display: none;
+   position: absolute;
+   z-index: 2;
+   top: 100%;
+   right: 0%;
+   li{
+       width: 300px;
+       height: 50px;
+       border-bottom:1px solid darkgray ;
+       padding: 10px 0px 0px 10px;
+       margin-right: 0px;
+       
+   }
 }
 
 #paperone:hover #topolino{
@@ -237,8 +239,6 @@ li , router-link , a , i{
     top: 0;
 }
     
-    
-
 #pluto > ul {
     display: none;
     position: absolute ;
@@ -263,47 +263,16 @@ color: $orange-color;
     display: block;
     color: orange;
 }
-// .navbar ul li ul {
-//   display: none;
-// }
-
-// .navbar ul li:hover ul {
-//   display: block;
-//   position: absolute;
-//   right:0;
-//   width: 200px;
-//   margin-top: 1rem;
-// }
-
-// .navbar ul li:hover ul li,
-// .navbar ul li ul li:hover ul li {
-//   display: block;
-//   background: #e7e7e7;
-// }
-
-// #navbar ul li:hover ul li a {
-//   color: #333;
-// }
-// #navbar ul li:hover ul li:hover {
-//   background: #e0e0e0;
-//   color: inherit;
-// }
-
-// #navbar ul li ul li:hover ul {
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 100%;
-//   margin-left: 5px;
-//   margin-top: 5px;
-// }
-
-
 
 li {
     margin-right: 40px;
     border-bottom: 1px solid;
 }
+
+
+
+    
+
 
 .img{ 
     width: 100%;
@@ -314,9 +283,6 @@ li {
     opacity: 1;
      
 }
-
-
-
 .active {
     color: orange;
 }
@@ -325,8 +291,11 @@ li:hover{
     color:#F2870C ;
 
 }
-
-
-
-
 </style>
+
+
+
+
+
+
+

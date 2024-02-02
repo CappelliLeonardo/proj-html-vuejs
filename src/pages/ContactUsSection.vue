@@ -22,12 +22,12 @@ export default {
     },
     methods: {
         onSubmit() {
-            this.clicked = true;
+            this.clicked = !this.clicked;
+            // setTimeout(() => {
+            //     console.log('Facciamo finta di chiamare le API')
+            // }, 1000)
             setTimeout(() => {
-                console.log('Facciamo finta di chiamare le API')
-            }, 1000)
-            setTimeout(() => {
-                this.submitted = true
+                this.submitted = !this.submitted;
             }, 2000)
         }
     }
@@ -52,12 +52,13 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-6">
+                        
                         <form @submit.prevent="onSubmit()" class="p-5">
                             <div class="row">
                                 <div class="col d-flex flex-column">
                                     <label for="name">Your Name</label>
                                     <input type="text"  id="name" col="5" v-model="form.name.value">
-                                    <span v-if="clicked && submitted && form.name.required && form.name.value === ''" style="color: red">
+                                    <span v-if="clicked && submitted && form.name.required && (form.name.value === '')" style="color: red">
                                         The Field Is Required
                                     </span>
                                 </div>
@@ -89,7 +90,9 @@ export default {
                                     <button type="submit" class="">SUBMIT</button>
                                 </div>
                             </div>
-                            <div class="row loader" v-if="clicked && !submitted"></div>
+                            <div class="row " v-if="clicked && !submitted">
+                                <div class="loader col-auto"></div>
+                            </div>
                             <div class="row" v-if="clicked && submitted && form.subject.required && form.subject.value ===''">
                                 <div class="col">
                                     <p class="banner">
@@ -125,13 +128,11 @@ export default {
                                         </h4>
                                     </li>
                                     <li>
-                                        502 New Design Str, Melbourne,
-                                    </li>
-                                    <li>
-                                        San Francisco, CA 94110,
-                                    </li>
-                                    <li>
-                                        United States Of America​ Australia
+                                        <span class="info-update">
+                                            502 New Design Str, Melbourne, <br>
+                                            San Francisco, CA 94110, <br>
+                                            United States Of America Australia
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -148,10 +149,10 @@ export default {
                                         </h4>
                                     </li>
                                     <li>
-                                        068 26589 996
-                                    </li>
-                                    <li>
-                                        demo@example.com
+                                        <span class="info-update">
+                                            068 26589 996 <br>
+                                            demo@example.com
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -168,10 +169,10 @@ export default {
                                         </h4>
                                     </li>
                                     <li>
-                                        Open: 8:00AM - Close: 18:00PM
-                                    </li>
-                                    <li>
-                                        Saturday - Sunday: Close
+                                        <span class="info-update">
+                                            Open: 8:00AM - Close: 18:00PM <br>
+                                            Saturday - Sunday: Close
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -190,6 +191,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/variables.scss";
+.bg-color{
+    padding-top: 100px;
+}
 .bg-color > .container-fluid:nth-child(2){
     background-color: #000000;
     padding-top: 100px;
@@ -215,6 +219,7 @@ form, input, textarea{
     color:white;
     outline: none;
     text-align: left;
+    font-weight: lighter;
     padding:10px;
     textarea{
         resize: vertical;
@@ -271,7 +276,10 @@ i{
             transition-duration: 200ms;
             }
 }
-
+.info-update, form{
+    color:darkgrey;
+    font-weight: lighter;
+}
 iframe{
     width: 100%;
     height: 450px;

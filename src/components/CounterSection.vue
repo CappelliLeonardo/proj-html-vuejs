@@ -33,7 +33,7 @@ export default {
         };
     },
     methods: {
-        getTheNumers(){
+        getTheNumbers(){
           this.counters.forEach((card,i) => {
             let interval=setInterval(()=> {
               if (card.counter<card.number) {
@@ -54,7 +54,7 @@ export default {
         CarouselSection
     },
     mounted(){
-      this.getTheNumers();
+      this.getTheNumbers();
     }
   }
 
@@ -125,7 +125,3 @@ export default {
 
 
 </style>
-
-
-<!-- 
-             -->

@@ -139,6 +139,9 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/main.scss" as *;
 @import "../assets/scss/partials/variables.scss";
+main{
+  padding-top: 100px;
+}
 .jumbotron-1 {
   height: 1000px;
   .carousel {
