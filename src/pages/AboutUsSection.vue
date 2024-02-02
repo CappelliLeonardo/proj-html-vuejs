@@ -1,5 +1,5 @@
 <script>
-import ParallaxForAbout from '../components/ParallaxSection.vue';
+import ParallaxForAbout from '../components/ParallaxForAbout.vue';
 import CounterSectionFourAbout from '../components/CounterSectionFourAbout.vue';
 import CardForAbout from '../components/CardForAbout.vue';
 import AccordionSection from '../components/AccordionSection.vue';

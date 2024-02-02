@@ -17,7 +17,7 @@ export default {
 
 <template>
     <div class="container-fluid parallax-container">
-        <div class="text-container text-center ">
+        <div class="text-container text-center">
             <h4 class="mb-2 active">INSTRUMENTAL ROCK</h4>
             <p class="mb-3 album">ALBUM OUT NOW</p>
             <button>
@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/main.scss" as *;
+@import "../assets/scss/partials/variables.scss";
 .parallax-container{
     height:800px;
     background-image: url('../../public/instrumental-rock/assets/cms_parallax.jpg');
@@ -51,12 +52,16 @@ export default {
                 width: 200px;
                 height: 50px;
                 background-color: transparent;
-                border-color: #F2870C;
-                font-size: 15px;
+                border: 1px solid $orange-color;
+                transition: 0.5s background-color ease-in-out;
                  a{
-                    
-                    text-decoration: none;
                     color: white;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    margin: auto;
+                    }
+                    &:hover{
+                        background-color: $orange-color;
                     }
                }
                .album{
