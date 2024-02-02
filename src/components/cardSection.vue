@@ -88,7 +88,11 @@ export default {
             color: white;
             border: none;
             background-color: black;
-           
+           .icons-box{
+            i{
+              margin: 0 7px;
+            }
+           }
             h3{
                 font-size: 1.5rem;
             }

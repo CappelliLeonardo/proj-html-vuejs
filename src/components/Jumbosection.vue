@@ -1,5 +1,5 @@
 <script>
-    import { Swiper, SwiperSlide } from 'swiper/vue';
+  import { Swiper, SwiperSlide } from 'swiper/vue';
   import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 export default {
     data() {
@@ -93,8 +93,11 @@ export default {
         left: 3%;
         z-index: 2;
         color: white;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.5);
         opacity: 0;
+        &:hover{
+          background-color: black;
+        }
     }
     
     .next{
@@ -106,8 +109,11 @@ export default {
         right: 3%;
         z-index: 2;
         color: white;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.5);
         opacity: 0;
+        &:hover{
+          background-color: black;
+        }
     }
     img{
         width: 100%;

@@ -8,37 +8,37 @@ export default {
         {
           img: "../../public/instrumental-rock/assets/hip_hop_wired_to_dance_make.jpg",
           title: "hip hop wired to dance make",
-          date: "06 november 2021",
+          date: "06 November 2021",
           text: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former",
         },
         {
           img: "public/instrumental-rock/assets/music_business-worldwide.jpg",
           title: "music buisness worldwide",
-          date: "06 november 2021",
+          date: "27 May 2022",
           text: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former",
         },
         {
           img: "public/instrumental-rock/assets/giveaways_rock.jpg",
           title: "giveaways rock to all",
-          date: "06 november 2021",
+          date: "07 May 2022",
           text: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former",
         },
         {
           img: "public/instrumental-rock/assets/drowned_in_sound_feel_joy.jpg",
           title: "drowned in sound fell joy",
-          date: "06 november 2021",
+          date: "10 April 2022",
           text: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former",
         },
         {
           img: "public/instrumental-rock/assets/dancing_astronaut_bounce_ipsum.jpg",
           title: "dancing in astrounaut bounce",
-          date: "06 november 2021",
+          date: "01 March 2022",
           text: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former",
         },
         {
           img: "public/instrumental-rock/assets/consequence_of_sound_make_us.jpg",
           title: "consequense of sound make us",
-          date: "06 november 2021",
+          date: "14 February",
           text: "Driving short distances music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former",
         },
       ],
@@ -86,7 +86,7 @@ export default {
               <img :src="carouselCards[i].img" alt="" />
             </div>
             <h4 class="my-2 text-uppercase">{{ carouselCards[i].title }}</h4>
-            <p class="my-2">{{ carouselCards[i].date }}</p>
+            <p class="my-2"><i class="fa-regular fa-calendar-days me-1"></i>{{ carouselCards[i].date }}</p>
             <p class="my-2">{{ carouselCards[i].text }}</p>
           </div>
         </swiper-slide>
@@ -163,6 +163,7 @@ export default {
       }
       & :nth-child(3) {
         color: $orange-color;
+        font-size: 16px;
       }
       & :nth-child(4) {
         color: darkgray;
