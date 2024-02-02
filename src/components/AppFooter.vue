@@ -110,8 +110,8 @@ export default {
 
 <style lang="scss" scoped>
 .container-fluid{
-    padding:0px 0px 150px 0px;
-    height: 700px;
+    
+    padding-bottom: 20px;
     background-color: black;
     color: white; 
 }
@@ -121,7 +121,9 @@ hr{
 footer .row h3{
     margin-bottom: 20px;
 }
-
+h6{
+    margin-bottom: 0px;
+}
 ul {
     list-style: none;
     

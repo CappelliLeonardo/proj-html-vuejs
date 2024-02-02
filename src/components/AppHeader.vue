@@ -109,45 +109,44 @@ export default {
                             <img src="../../public/instrumental-rock/assets/Logo.png" alt="">
                         </div>
 
-
                         <div class="collapse navbar-collapse h-100 text-uppercase " id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center  ms-auto mb-2 mb-lg-0 h-100 ">
                                 <li v-for="(x,i) in navigazione" :key="i" >
-                                <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
-                                <li id="hover-item" class="position-relative me-0 h-100" v-else-if="i==3">{{ x.title }}
-                                    <ul id="event-drop">
-                                        <li v-for="(elem ,o) in event" class="text-bg-dark h-100 event-drop-item"  :key="o">
-                                            {{ elem.title }}
-                                        </li>
-                                    </ul>
-                                </li>
-                                <router-link v-else-if="i==4" :to="{name:'AboutUsSection'}" >{{ x.title }}</router-link>
-                                <router-link v-else-if="i==5" :to="{name:'ContactUsSection'}" >{{ x.title }}                                   
-                                </router-link>
-                                <a v-else href="#nogo">
-                                    {{x.title}}
-                                </a>
-                                </li>
-                                <li id="paperone" class="position-relative h-100 prova d-flex align-items-center ">
-                                    <a href="#">Shop</a>  <i class="fas fa-angle-down"></i>
-                                        <ul id="topolino">
-                                            <li id="pippo" class="position-relative text-bg-dark"><a href="#">ProductType</a>
-                                                <ul class="text-bg-dark">
-                                                    <li><a href="#">Simple Product</a></li>
-                                                    <li><a href="#">External/Affiliate Product</a></li>
-                                                    <li><a href="#">Downloadable Product</a></li>
-                                                </ul>
-                                            </li>
-                                        
-                                        
-                                            <li id="pluto" class="position-relative text-bg-dark"><a href="#">ShopPage</a>
-                                                <ul class="text-bg-dark">
-                                                    <li><a href="#">Simple Product</a></li>
-                                                    <li><a href="#">External/Affiliate Product</a></li>
-                                                    <li><a href="#">Downloadable Product</a></li>
-                                                </ul>
+                                    <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
+                                    <li id="hover-item" class="position-relative me-0 h-100" v-else-if="i==3">{{ x.title }}
+                                        <ul id="event-drop">
+                                            <li v-for="(elem ,o) in event" class="text-bg-dark h-100 event-drop-item"  :key="o">
+                                                {{ elem.title }}
                                             </li>
                                         </ul>
+                                    </li>
+                                    <router-link v-else-if="i==4" :to="{name:'AboutUsSection'}" >{{ x.title }}</router-link>
+                                    <router-link v-else-if="i==5" :to="{name:'ContactUsSection'}" >{{ x.title }}                                   
+                                    </router-link>
+                                    <a v-else href="#nogo">
+                                        {{x.title}}
+                                    </a>
+                                </li>
+                                <li id="paperone" class="position-relative h-100 prova d-flex align-items-center ">
+                                    <a href="#">Shop</a><i class="fas fa-angle-down"></i>
+                                    <ul id="topolino">
+                                        <li id="pippo" class="position-relative text-bg-dark"><a href="#">ProductType</a>
+                                            <ul class="text-bg-dark">
+                                                <li><a href="#">Simple Product</a></li>
+                                                <li><a href="#">External/Affiliate Product</a></li>
+                                                <li><a href="#">Downloadable Product</a></li>
+                                            </ul>
+                                        </li>
+                                    
+                                    
+                                        <li id="pluto" class="position-relative text-bg-dark"><a href="#">ShopPage</a>
+                                            <ul class="text-bg-dark">
+                                                <li><a href="#">Simple Product</a></li>
+                                                <li><a href="#">External/Affiliate Product</a></li>
+                                                <li><a href="#">Downloadable Product</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>                                                                                                                                                                            
                         </div>
@@ -157,15 +156,7 @@ export default {
     </header>
 </template>
                                 
-            
-        
-                
-            
-       
-        
-                                    
-                               
-                                
+
 
 <style lang="scss" scoped>
 @import '../assets/scss/partials/variables.scss';
@@ -268,11 +259,6 @@ li {
     border-bottom: 1px solid;
 }
 
-
-
-    
-
-
 .img{ 
     width: 100%;
     
@@ -291,6 +277,21 @@ li:hover{
 
 }
 </style>
+            
+        
+                
+            
+       
+        
+                                    
+                               
+                                
+
+
+
+
+    
+
 
 
 
