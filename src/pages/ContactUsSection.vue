@@ -89,7 +89,9 @@ export default {
                                     <button type="submit" class="">SUBMIT</button>
                                 </div>
                             </div>
-                            <div class="row loader" v-if="clicked && !submitted"></div>
+                            <div class="row " v-if="clicked && !submitted">
+                                <div class="loader col-auto"></div>
+                            </div>
                             <div class="row" v-if="clicked && submitted && form.subject.required && form.subject.value ===''">
                                 <div class="col">
                                     <p class="banner">
@@ -125,13 +127,19 @@ export default {
                                         </h4>
                                     </li>
                                     <li>
-                                        502 New Design Str, Melbourne,
+                                        <span>
+                                            502 New Design Str, Melbourne,
+                                        </span>
                                     </li>
                                     <li>
-                                        San Francisco, CA 94110,
+                                        <span>
+                                            San Francisco, CA 94110,
+                                        </span>
                                     </li>
                                     <li>
-                                        United States Of America​ Australia
+                                        <span>
+                                            United States Of America Australia
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -148,10 +156,14 @@ export default {
                                         </h4>
                                     </li>
                                     <li>
-                                        068 26589 996
+                                        <span>
+                                            068 26589 996
+                                        </span>
                                     </li>
                                     <li>
-                                        demo@example.com
+                                        <span>
+                                            demo@example.com
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -168,10 +180,14 @@ export default {
                                         </h4>
                                     </li>
                                     <li>
-                                        Open: 8:00AM - Close: 18:00PM
+                                        <span>
+                                            Open: 8:00AM - Close: 18:00PM
+                                        </span>
                                     </li>
                                     <li>
-                                        Saturday - Sunday: Close
+                                        <span>
+                                            Saturday - Sunday: Close
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -190,6 +206,9 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/variables.scss";
+.bg-color{
+    padding-top: 100px;
+}
 .bg-color > .container-fluid:nth-child(2){
     background-color: #000000;
     padding-top: 100px;
