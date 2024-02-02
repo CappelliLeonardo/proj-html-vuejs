@@ -100,16 +100,18 @@ export default {
 
        
 
-            <div class="row align-items-center  h-100">
+            <div class="row align-items-center h-100">
 
-                <div class="col-12  h-100 ">
+                <div class="col-12  h-100">
                     
-                    <div class=" p-0 navbar navbar-expand-md  h-100 ">
+                    <div class=" p-0 navbar navbar-expand-md  h-100">
                         <div>
-                            <img src="../../public/instrumental-rock/assets/Logo.png" alt="">
+                            <router-link  :to="{name:'AppMain'}" >
+                                <img src="../../public/instrumental-rock/assets/Logo.png" alt="">
+                            </router-link>
                         </div>
 
-                        <div class="collapse navbar-collapse h-100 text-uppercase " id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse h-100 text-uppercase" id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center  ms-auto mb-2 mb-lg-0 h-100 ">
                                 <li v-for="(x,i) in navigazione" :key="i" >
                                     <router-link v-if="i==0" :to="{name:'AppMain'}" >{{ x.title }}</router-link>
