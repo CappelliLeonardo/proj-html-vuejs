@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    
         <section>
             <div class="text-center dark ">
                 <h1>
@@ -50,45 +50,10 @@ export default {
         <CardForAbout/>
         
 
-    </main>
+    
 </template>
 
 <style lang="scss" scoped>
-
-    .container-fluid{
-        
-        background-color: black;
-        color: white;
-        
-       
-    }
-    .pianista {
-        width: calc(100% / 2);
-    }
-    
-    .container {
-        width: 1400px;
-        padding: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items:flex-start;
-    }
-    .container-jazz{
-        width: 680px;
-    }
-    
-    
-
-     .accordion-button {
-        background-color: black;
-        color: white;
-        padding: 0 0 0 5;
-        font-size: 1.2rem;
-    }
-
-    
-    
-
     #orange:hover {
         color: #F2870C;
     }
@@ -112,16 +77,6 @@ export default {
         
     }
 
-    button{
-    background-color: transparent;
-    color: white;
-    border-color: #F2870C;
-    font-size: 15px;
-    padding: 10px 50px;
-    margin-top: 35px;
-    }
+    
 
-    button:hover{
-    background-color:#F2870C ;
-    }
 </style>

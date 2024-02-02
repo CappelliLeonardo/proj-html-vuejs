@@ -62,8 +62,23 @@ export default {
                             T: 1 123-456-789
                         </h6>
                         <h6>
-                             Email: <a href="#">demo@example.com</a>
-                        </h6>                       
+                            Email: <a href="#">demo@example.com</a>
+                        </h6> 
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                             
+                        
+                                         
                     </div>
                 </div>
 
@@ -113,13 +128,19 @@ export default {
     padding:0px 0px 150px 0px;
     height: 700px;
     background-color: black;
-    color: white; 
+    color: darkgray; 
 }
 hr{
     margin:0px 0px 1rem 0px!important;
 }
+p{
+    font-size: 15px;
+    line-height: 1.5;
+    
+}
 footer .row h3{
     margin-bottom: 20px;
+    color: white;
 }
 
 ul {
@@ -138,11 +159,13 @@ button{
 }
 footer .row #emailInput{
     background: transparent;
-    border: 1 solid grey;
+    border: 1 solid darkgray;
     color: white;
+    border-radius: 0;
 }
 
 footer .row > .space {
+    line-height: 2;
     margin-right: 70px;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -151,9 +174,10 @@ footer .row > .space {
 
 textarea {
   background: transparent;
-  
+  font-weight: 400%;
+  font-size: 15px;
   color: white;
-  border: 1 solid grey;
+  border: 1 solid darkgray;
   margin-top: 20px;
   margin-bottom: 20px;
   outline: none;
@@ -171,6 +195,9 @@ li:hover{
 a:hover{
     color:#F2870C ;
 }
-    
+
+i{
+    margin-right: 1.5rem !important;
+}
 
 </style>

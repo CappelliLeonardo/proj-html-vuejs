@@ -89,6 +89,7 @@ export default {
                 img{
                 height: 100%;
                 width: 100%;
+                object-fit: contain;
                 &:hover{
                     transform: scale(1.05);
                     transition: ease-in;
