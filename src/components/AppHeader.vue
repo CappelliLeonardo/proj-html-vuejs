@@ -148,6 +148,7 @@ export default {
                                         </li>
                                     </ul>
                                 </li>
+                                <li><i class="fa-solid fa-magnifying-glass"></i></li>
                             </ul>                                                                                                                                                                            
                         </div>
                     </div>
