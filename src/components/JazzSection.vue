@@ -32,7 +32,9 @@ export default {
                     Located In Vancouver, British Columbia, The Society, From The Very Begi To Establish Vancouver 
                     As A Centre For The Creation And Exchange Of Sounds  
                 </p>
-                <button>READ MORE</button>
+                <button><a href="">
+                    READ MORE
+                </a></button>
             </div>
 
             <div class="boxImg">
@@ -44,6 +46,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/scss/main.scss" as *;
+@import "../assets/scss/partials/variables.scss";
 .container-fluid{
         
         background-color: black;
@@ -68,6 +71,22 @@ export default {
     }
     .container-jazz{
         width:600px ;
+        button{
+                width: 200px;
+                height: 50px;
+                background-color: transparent;
+                border: 1px solid $orange-color;
+                transition: 0.5s background-color ease-in-out;
+                 a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    margin: auto;
+                    }
+                    &:hover{
+                        background-color: $orange-color;
+                    }
+               }
     }
     h4 {
         color: orange;
@@ -81,18 +100,7 @@ export default {
         object-fit: contain;
     }
 
-    button{
-    background-color: transparent;
-    color: white;
-    border-color: #F2870C;
-    font-size: 15px;
-    padding: 10px 50px;
-    margin-top: 35px;
-    }
-
-    button:hover{
-    background-color:#F2870C ;
-    }
+   
 
     h2{
         text-transform: uppercase;
