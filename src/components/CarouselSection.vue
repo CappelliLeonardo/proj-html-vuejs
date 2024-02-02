@@ -59,7 +59,7 @@ export default {
 </script>
 
 <template>
-  <div class="another-fuckin-carousel">
+  <div class="carousel-container">
     <ul>
       <li>music blog</li>
       <li>best music blog</li>
@@ -109,7 +109,7 @@ export default {
   width: 1300px;
   margin: 0 auto;
 }
-.another-fuckin-carousel {
+.carousel-container {
   ul {
     text-align: center;
     color: white;
